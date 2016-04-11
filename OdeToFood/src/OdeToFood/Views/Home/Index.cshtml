@@ -1,0 +1,15 @@
+﻿@model OdeToFood.ViewModels.HomePageViewModel
+@{
+    ViewBag.Title = "Home";
+
+}
+
+<h1>Welcome</h1>
+@foreach (var restuarant in Model.Restaurants)
+{
+    @Html.Partial("_Summary", restuarant)
+}
+
+<div>
+    <a asp-action="Create">Create</a>
+</div>
